@@ -1,0 +1,18 @@
+(define (intergral f a b dx)
+    (define (add-dx x)
+        (+ x dx)
+    )
+    (* (sum f (+ a (/ dx 2.0)) add-dx b) dx)
+)
+(define (cube n)
+    (* n n n))
+
+(define (sum term a next b)
+    (if (> a b)
+        0
+        (+ (term a) (sum term (next a) next b))
+    )
+)
+(display (intergral cube 0 1 0.01))
+(newline)
+(display (intergral cube 0 1 0.001))
