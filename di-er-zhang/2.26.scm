@@ -1,0 +1,7 @@
+(define x (list 1 2 4))
+(define y (list 5 6 8))
+(display (append x y))
+(newline)
+(display (cons x y))
+(newline)
+(display (list x y))
