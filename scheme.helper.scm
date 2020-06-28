@@ -17,3 +17,21 @@
         a
         (gcd b (remainder a b))))
 ; (display (gcd 10 15))
+
+(define (filter predicate sequence)
+    (cond 
+        ((null? sequence) nil)
+        ((predicate (car sequence))
+            (cons (car sequence) (filter predicate (cdr sequence)))
+        )
+        (else (filter predicate (cdr sequence)))
+    )
+)
+(define (accumulate op inital sequence)
+    (if (null? sequence)
+        inital
+        (op (car sequence)
+            (accumulate op inital (cdr sequence))
+        )
+    )
+)

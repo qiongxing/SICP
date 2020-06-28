@@ -13,4 +13,4 @@
         result
         (iter (cdr remained-items)
               (cons (car remained-items) result))))
-(display (reverse (list 1 2 5)))
+; (display (reverse (list 1 2 5)))
