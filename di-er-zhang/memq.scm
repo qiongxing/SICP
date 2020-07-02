@@ -6,3 +6,13 @@
 )
 (display (memq 'apple '(pear banana prune)))
 (display (memq 'apple '(x (apple sauce) y apple pear)))
+
+(display (list 'a 'b 'c))
+(display (list (list 'a23)))
+(display (cdr '((x1 x2) (y1 y2))))
+(display (cadr '((x1 x2) (y1 y2))))
+(display (car '(a short imp)))
+(display (pair? (car '(a short imp))))
+(display (memq 'red '((red shoes) (blue socks))))
+(display (memq 'red '(red shoes blue socks)))
+(exit)
